@@ -4,11 +4,13 @@ const ImageQuestion = ({ question, image, options, onAnswer }) => {
   return (
     <div className="w-full max-w-sm p-6 bg-yellow-200 rounded-2xl shadow-lg mb-8 text-black">
       <h3 className="text-xl font-bold mb-4">{question}</h3>
-      <img
-        src={`/images/${image}`}
-        alt={question}
-        className="mb-4 w-full rounded-lg"
-      />
+      <div className="flex justify-center items-center mb-4">
+        <img
+          src={`/images/${image}`}
+          alt={question}
+          className="w-40 h-40 object-contain rounded-lg"
+        />
+      </div>
       <ul className="space-y-3">
         {options.map((option) => (
           <li
