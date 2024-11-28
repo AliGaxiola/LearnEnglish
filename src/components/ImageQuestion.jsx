@@ -1,6 +1,14 @@
 import PropTypes from "prop-types";
+import { useState } from "react";
 
-const ImageQuestion = ({ question, image, options, onAnswer }) => {
+const ImageQuestion = ({ question, image, options, answer, onAnswer }) => {
+  const [selectedAnswer, setSelectedAnswer] = useState("");
+
+  const handleClick = (option) => {
+    setSelectedAnswer(option);
+    onAnswer(option);
+  };
+
   return (
     <div className="w-full max-w-sm p-6 bg-yellow-200 rounded-2xl shadow-lg mb-8 text-black">
       <h3 className="text-xl font-bold mb-4">{question}</h3>
@@ -12,25 +20,34 @@ const ImageQuestion = ({ question, image, options, onAnswer }) => {
         />
       </div>
       <ul className="space-y-3">
-        {options.map((option) => (
-          <li
-            key={option}
-            className="p-3 bg-white rounded-xl hover:bg-blue-200 cursor-pointer"
-            onClick={() => onAnswer(option)}
-          >
-            {option}
-          </li>
-        ))}
+        {options.map((option) => {
+          let bgColor = "bg-white";
+          if (selectedAnswer) {
+            if (option === selectedAnswer) {
+              bgColor = option === answer ? "bg-green-500" : "bg-red-500";
+            }
+          }
+
+          return (
+            <li
+              key={option}
+              className={`p-3 rounded-xl cursor-pointer hover:bg-blue-200 ${bgColor}`}
+              onClick={() => handleClick(option)}
+            >
+              {option}
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
 };
 
-// Validación de props
 ImageQuestion.propTypes = {
   question: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  answer: PropTypes.string.isRequired,
   onAnswer: PropTypes.func.isRequired,
 };
 

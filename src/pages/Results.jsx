@@ -14,7 +14,7 @@ const Results = () => {
       <h2 className="text-4xl font-extrabold mb-6">Your Results</h2>
       <div className="grid grid-cols-1 gap-4 w-full max-w-md">
         {Object.keys(results).length === 0 ? (
-          <p className="text-lg">No levels completed yet.</p>
+          <p className="text-lg text-center">No levels completed yet.</p>
         ) : (
           Object.keys(results).map((level) => (
             <div

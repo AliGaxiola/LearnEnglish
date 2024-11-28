@@ -1,23 +1,21 @@
-// src/data/questions.js
-
 const questions = {
   1: [
     {
       type: "text",
-      question: "What is 1 + 1?",
+      question: "¿Cuánto es 1 + 1?",
       options: ["1", "2", "3", "4"],
       answer: "2",
     },
     {
       type: "image",
-      question: "What is this?",
+      question: "¿Qué es esto?",
       image: "Apple.png",
       options: ["Banana", "Apple", "Orange", "Pear"],
       answer: "Apple",
     },
     {
       type: "fill-in-the-blank",
-      question: "The sky is _____",
+      question: "El cielo es _____",
       options: ["blue", "red", "green", "yellow"],
       answer: "blue",
     },
@@ -25,20 +23,20 @@ const questions = {
   2: [
     {
       type: "text",
-      question: "How many legs does a cat have?",
+      question: "¿Cuántas patas tiene un gato?",
       options: ["2", "3", "4", "5"],
       answer: "4",
     },
     {
       type: "image",
-      question: "What fruit is this?",
+      question: "¿Qué fruta es esta?",
       image: "Banana.png",
       options: ["Apple", "Banana", "Grape", "Peach"],
       answer: "Banana",
     },
     {
       type: "fill-in-the-blank",
-      question: "I can see a _____ in the sky.",
+      question: "Puedo ver una _____ en el cielo.",
       options: ["cloud", "fish", "car", "tree"],
       answer: "cloud",
     },
@@ -46,20 +44,20 @@ const questions = {
   3: [
     {
       type: "text",
-      question: "What color is a lemon?",
+      question: "¿De qué color es un limón?",
       options: ["Red", "Blue", "Yellow", "Green"],
       answer: "Yellow",
     },
     {
       type: "image",
-      question: "Identify this animal.",
+      question: "Identifica este animal.",
       image: "Dog.png",
       options: ["Cat", "Dog", "Rabbit", "Bird"],
       answer: "Dog",
     },
     {
       type: "fill-in-the-blank",
-      question: "The sun is very _____",
+      question: "El sol es muy _____",
       options: ["hot", "cold", "small", "dark"],
       answer: "hot",
     },
@@ -67,20 +65,20 @@ const questions = {
   4: [
     {
       type: "text",
-      question: "What is 3 + 2?",
+      question: "¿Cuánto es 3 + 2?",
       options: ["4", "5", "6", "7"],
       answer: "5",
     },
     {
       type: "image",
-      question: "What fruit is this?",
+      question: "¿Qué fruta es esta?",
       image: "Orange.png",
       options: ["Apple", "Banana", "Orange", "Peach"],
       answer: "Orange",
     },
     {
       type: "fill-in-the-blank",
-      question: "The grass is _____",
+      question: "El pasto es _____",
       options: ["green", "blue", "red", "purple"],
       answer: "green",
     },
@@ -88,20 +86,20 @@ const questions = {
   5: [
     {
       type: "text",
-      question: "How many wheels does a car have?",
+      question: "¿Cuántas ruedas tiene un coche?",
       options: ["2", "3", "4", "5"],
       answer: "4",
     },
     {
       type: "image",
-      question: "What animal is this?",
+      question: "¿Qué animal es este?",
       image: "Cat.png",
       options: ["Dog", "Cat", "Rabbit", "Bird"],
       answer: "Cat",
     },
     {
       type: "fill-in-the-blank",
-      question: "The car is very _____",
+      question: "El coche es muy _____",
       options: ["fast", "slow", "green", "apple"],
       answer: "fast",
     },
@@ -109,20 +107,20 @@ const questions = {
   6: [
     {
       type: "text",
-      question: "What is 5 - 2?",
+      question: "¿Cuánto es 5 - 2?",
       options: ["2", "3", "4", "5"],
       answer: "3",
     },
     {
       type: "image",
-      question: "What is this animal?",
+      question: "¿Qué animal es este?",
       image: "Rabbit.png",
       options: ["Rabbit", "Dog", "Cat", "Bird"],
       answer: "Rabbit",
     },
     {
       type: "fill-in-the-blank",
-      question: "The bird can _____",
+      question: "El pájaro puede _____",
       options: ["fly", "swim", "run", "jump"],
       answer: "fly",
     },
