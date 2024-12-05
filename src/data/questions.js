@@ -19,6 +19,19 @@ const questions = {
       options: ["blue", "red", "green", "yellow"],
       answer: "blue",
     },
+    {
+      type: "image",
+      question: "¿Qué forma tiene la pelota?",
+      image: "Ball.png",
+      options: ["Square", "Circle", "Triangle", "Rectangle"],
+      answer: "Circle",
+    },
+    {
+      type: "text",
+      question: "¿Qué animal dice 'Moo'?",
+      options: ["Cow", "Dog", "Cat", "Bird"],
+      answer: "Cow",
+    },
   ],
   2: [
     {
@@ -40,17 +53,29 @@ const questions = {
       options: ["cloud", "fish", "car", "tree"],
       answer: "cloud",
     },
+    {
+      type: "text",
+      question: "¿De qué color es el sol?",
+      options: ["Yellow", "Red", "Blue", "Green"],
+      answer: "Yellow",
+    },
+    {
+      type: "fill-in-the-blank",
+      question: "El perro dice _____",
+      options: ["Meow", "Woof", "Quack", "Moo"],
+      answer: "Woof",
+    },
   ],
   3: [
     {
       type: "text",
-      question: "¿De qué color es un limón?",
+      question: "¿De qué color es un tomate?",
       options: ["Red", "Blue", "Yellow", "Green"],
-      answer: "Yellow",
+      answer: "Red",
     },
     {
       type: "image",
-      question: "Identifica este animal.",
+      question: "Qué animal es este.",
       image: "Dog.png",
       options: ["Cat", "Dog", "Rabbit", "Bird"],
       answer: "Dog",
@@ -60,6 +85,18 @@ const questions = {
       question: "El sol es muy _____",
       options: ["hot", "cold", "small", "dark"],
       answer: "hot",
+    },
+    {
+      type: "text",
+      question: "¿Qué animal dice 'Meow'?",
+      options: ["Dog", "Cat", "Rabbit", "Fish"],
+      answer: "Cat",
+    },
+    {
+      type: "fill-in-the-blank",
+      question: "El ratón es _____",
+      options: ["small", "big", "blue", "round"],
+      answer: "small",
     },
   ],
   4: [
@@ -82,6 +119,19 @@ const questions = {
       options: ["green", "blue", "red", "purple"],
       answer: "green",
     },
+    {
+      type: "fill-in-the-blank",
+      question: "La luna es _____ por la noche.",
+      options: ["bright", "dark", "blue", "hot"],
+      answer: "bright",
+    },
+    {
+      type: "image",
+      question: "¿Qué es esto?",
+      image: "Car.png",
+      options: ["Bike", "Car", "Bus", "Truck"],
+      answer: "Car",
+    },
   ],
   5: [
     {
@@ -103,6 +153,19 @@ const questions = {
       options: ["fast", "slow", "green", "apple"],
       answer: "fast",
     },
+    {
+      type: "text",
+      question: "¿Qué animal vive en el agua?",
+      options: ["Dog", "Cat", "Fish", "Bird"],
+      answer: "Fish",
+    },
+    {
+      type: "image",
+      question: "¿Qué comida es esta?",
+      image: "Burger.png",
+      options: ["Burger", "Pizza", "Pasta", "Salad"],
+      answer: "Burger",
+    },
   ],
   6: [
     {
@@ -123,6 +186,19 @@ const questions = {
       question: "El pájaro puede _____",
       options: ["fly", "swim", "run", "jump"],
       answer: "fly",
+    },
+    {
+      type: "text",
+      question: "¿Cuál es el opuesto de 'big'?",
+      options: ["Small", "Large", "Huge", "Heavy"],
+      answer: "Small",
+    },
+    {
+      type: "image",
+      question: "¿Qué objeto es este?",
+      image: "Book.png",
+      options: ["Book", "Pen", "Laptop", "Phone"],
+      answer: "Book",
     },
   ],
 };

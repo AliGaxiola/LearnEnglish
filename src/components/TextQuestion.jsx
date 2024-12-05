@@ -16,15 +16,22 @@ const TextQuestion = ({ question, options, answer, onAnswer }) => {
         {options.map((option) => {
           let bgColor = "bg-white";
           if (selectedAnswer) {
-            if (option === selectedAnswer) {
-              bgColor = option === answer ? "bg-green-500" : "bg-red-500";
-            }
+            bgColor =
+              option === answer
+                ? "bg-green-500"
+                : option === selectedAnswer
+                ? "bg-red-500"
+                : "bg-white";
           }
 
           return (
             <li
               key={option}
-              className={`p-3 rounded-xl cursor-pointer hover:bg-blue-200 ${bgColor}`}
+              className={`p-3 rounded-xl cursor-pointer hover:bg-blue-200 ${bgColor} focus:outline-none select-none`}
+              style={{
+                WebkitTapHighlightColor: "transparent",
+                userSelect: "none",
+              }}
               onClick={() => handleClick(option)}
             >
               {option}

@@ -33,7 +33,7 @@ const Results = () => {
         )}
       </div>
 
-      <Link to="/">
+      <Link to="/home">
         <button className="w-64 py-4 mt-6 bg-pink-500 text-white text-2xl rounded-lg shadow-lg hover:bg-pink-600">
           Back to Home
         </button>

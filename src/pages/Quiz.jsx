@@ -36,14 +36,13 @@ const Quiz = () => {
       setTimeout(() => {
         saveResult(level, newScore, levelQuestions.length);
         setIsCompleted(true);
-      }, 2000); // Delay de 2.5 segundos del modal
+      }, 2500);
     } else {
-      // Tiempo de 2.5 segundos para feedback
       setTimeout(() => {
         setFeedback("");
         setSelectedAnswer("");
         setCurrentIndex((prevIndex) => prevIndex + 1);
-      }, 2500); // Tiempo ajustado para leer el feedback
+      }, 3000);
     }
   };
 
@@ -54,22 +53,21 @@ const Quiz = () => {
   };
 
   useEffect(() => {
-    // Verificamos que currentQuestion exista antes de leer
     if (currentQuestion) {
-      const questionText =
+      const questionTextForSpeech =
         currentQuestion.type === "fill-in-the-blank"
-          ? currentQuestion.question.replace(/Blank|_____/g, "")
+          ? currentQuestion.question.replace(/_____/g, "blank")
           : currentQuestion.question;
 
-      speechSynthesis.cancel(); // Detener cualquier lectura previa
+      speechSynthesis.cancel();
 
       setTimeout(() => {
-        const utterance = new SpeechSynthesisUtterance(questionText);
-        utterance.lang = "es-ES"; // Leer preguntas en español
+        const utterance = new SpeechSynthesisUtterance(questionTextForSpeech);
+        utterance.lang = "es-ES";
         speechSynthesis.speak(utterance);
-      }, 300); // Pequeño retraso para evitar conflictos
+      }, 300);
     }
-  }, [currentQuestion]); // Añadimos currentQuestion como dependencia
+  }, [currentQuestion]);
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-green-300 to-blue-400 text-white p-6">
